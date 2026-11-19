@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en-AU">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Home | CareConnect Disability &amp; Aged Care Referrals</title>
+  <link rel="stylesheet" href="css/reset.css">
+  <link rel="stylesheet" href="css/variables.css">
+  <link rel="stylesheet" href="css/layout.css">
+  <link rel="stylesheet" href="css/components.css">
+  <script src="js/main.js" defer></script>
+  <script src="js/modals.js" defer></script>
+  <script src="js/forms.js" defer></script>
+</head>
+<body>
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="index.html" class="logo-link">
+        <img src="assests/logo.jpg" alt="CareConnect Australia Home" width="120" height="48">
+      </a>
+      <nav aria-label="Page Directory">
+        <ul class="nav-list">
+          <li><a href="index.html" class="nav-link" aria-current="page">Home</a></li>
+          <li><a href="feedback.html" class="nav-link">Feedback</a></li>
+          <li><a href="more-info.html" class="nav-link">More Information</a></li>
+          <li><a href="providers.html" class="nav-link">Providers</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main-content" class="container">
+    <!-- Brief Intro & "If New" Link -->
+    <section class="hero-section" aria-labelledby="hero-heading">
+      <div class="hero-header">
+        <h1 id="hero-heading" class="hero-title">Disability &amp; Aged Care Support Referrals</h1>
+        <a href="more-info.html" class="btn btn-secondary">New Here? How It Works</a>
+      </div>
+      <p>We connect Australians seeking disability or aged care services with registered providers in their area. Complete the relevant short form below and we will match your request without long phone queues or repetitive paperwork.</p>
+
+      <!-- Explanatory Callouts -->
+      <div class="grid-2 section-spacing">
+        <div class="callout">
+          <h2>Why We Ask Only a Few Questions</h2>
+          <p>We only collect basic details so we can quickly match you with suitable local providers. Detailed care assessments happen directly with the provider you choose.</p>
+        </div>
+        <div class="callout callout-warning">
+          <h2>Why There Are No Housing Options</h2>
+          <p>Specialist disability accommodation (SDA) and aged care residential placements require formal government clinical assessments and vacancy registries that fall outside our referral scope.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Dual Request Forms Grid -->
+    <section aria-label="Support Request Forms" class="grid-2">
+      
+      <!-- 1. Disability Support Request Form -->
+      <article class="card">
+        <h2 class="card-title">Disability Support Request</h2>
+        <form id="disability-request-form" class="request-form" data-form-type="Disability Request">
+          
+          <div class="form-group">
+            <label for="dis-name" class="form-label">First Name or Initials</label>
+            <input type="text" id="dis-name" name="name" class="form-control" maxlength="35" placeholder="e.g. Sarah M." required>
+            <span class="field-hint">Short 1&ndash;3 word entry</span>
+          </div>
+
+          <div class="form-group">
+            <label for="dis-contact" class="form-label">Best Contact Number or Email</label>
+            <input type="text" id="dis-contact" name="contact" class="form-control" maxlength="50" placeholder="e.g. 0400 000 000" required>
+          </div>
+
+          <div class="form-group">
+            <label for="dis-location" class="form-label">General Location (Suburb or Postcode)</label>
+            <input type="text" id="dis-location" name="location" class="form-control" maxlength="35" placeholder="e.g. Parramatta 2150" required>
+          </div>
+
+          <div class="form-group">
+            <label for="dis-support" class="form-label">Type of Support Wanted</label>
+            <select id="dis-support" name="supportType" class="form-control" required>
+              <option value="" disabled selected>Select a support category...</option>
+              <option value="daily-living">Daily Living &amp; Personal Care</option>
+              <option value="community-access">Community &amp; Social Participation</option>
+              <option value="allied-health">Allied Health &amp; Therapy</option>
+              <option value="plan-management">Support Coordination / Plan Management</option>
+              <option value="domestic-assistance">Home &amp; Garden Maintenance</option>
+            </select>
+          </div>
+
+          <fieldset class="radio-group">
+            <legend>Do you currently have an active NDIS plan?</legend>
+            <div class="radio-options">
+              <label class="radio-label">
+                <input type="radio" name="ndisPlan" value="Yes" required> Yes
+              </label>
+              <label class="radio-label">
+                <input type="radio" name="ndisPlan" value="No" required> No
+              </label>
+            </div>
+          </fieldset>
+
+          <fieldset class="radio-group">
+            <legend>Are you enquiring on behalf of someone else?</legend>
+            <div class="radio-options">
+              <label class="radio-label">
+                <input type="radio" name="carerEnquiry" value="Yes" required> Yes
+              </label>
+              <label class="radio-label">
+                <input type="radio" name="carerEnquiry" value="No" required> No
+              </label>
+            </div>
+          </fieldset>
+
+          <div class="checkbox-row">
+            <input type="checkbox" id="dis-no-housing" name="noHousingAck" required>
+            <label for="dis-no-housing"><strong>No Housing Acknowledgment:</strong> I confirm this request is not for housing, emergency shelter, or residential accommodation.</label>
+          </div>
+
+          <button type="submit" class="btn btn-primary btn-full">Submit Disability Request</button>
+        </form>
+      </article>
+
+      <!-- 2. Aged Care Support Request Form -->
+      <article class="card">
+        <h2 class="card-title">Aged Care Support Request</h2>
+        <form id="aged-request-form" class="request-form" data-form-type="Aged Care Request">
+          
+          <div class="form-group">
+            <label for="aged-name" class="form-label">First Name or Initials</label>
+            <input type="text" id="aged-name" name="name" class="form-control" maxlength="35" placeholder="e.g. John D." required>
+            <span class="field-hint">Short 1&ndash;3 word entry</span>
+          </div>
+
+          <div class="form-group">
+            <label for="aged-contact" class="form-label">Best Contact Number or Email</label>
+            <input type="text" id="aged-contact" name="contact" class="form-control" maxlength="50" placeholder="e.g. 0400 000 000" required>
+          </div>
+
+          <div class="form-group">
+            <label for="aged-location" class="form-label">General Location (Suburb or Postcode)</label>
+            <input type="text" id="aged-location" name="location" class="form-control" maxlength="35" placeholder="e.g. Geelong 3220" required>
+          </div>
+
+          <div class="form-group">
+            <label for="aged-support" class="form-label">Type of Support Wanted</label>
+            <select id="aged-support" name="supportType" class="form-control" required>
+              <option value="" disabled selected>Select a support category...</option>
+              <option value="home-care">In-Home Personal &amp; Nursing Care</option>
+              <option value="domestic-help">Cleaning, Meals &amp; Errands</option>
+              <option value="transport">Transport &amp; Social Outings</option>
+              <option value="respite">Short-Term In-Home Respite</option>
+              <option value="allied-health">Physiotherapy &amp; Mobility Support</option>
+            </select>
+          </div>
+
+          <fieldset class="radio-group">
+            <legend>Are you registered with My Aged Care?</legend>
+            <div class="radio-options">
+              <label class="radio-label">
+                <input type="radio" name="myAgedCare" value="Yes" required> Yes
+              </label>
+              <label class="radio-label">
+                <input type="radio" name="myAgedCare" value="No" required> No
+              </label>
+            </div>
+          </fieldset>
+
+          <fieldset class="radio-group">
+            <legend>Are you enquiring on behalf of a family member?</legend>
+            <div class="radio-options">
+              <label class="radio-label">
+                <input type="radio" name="familyEnquiry" value="Yes" required> Yes
+              </label>
+              <label class="radio-label">
+                <input type="radio" name="familyEnquiry" value="No" required> No
+              </label>
+            </div>
+          </fieldset>
+
+          <div class="checkbox-row">
+            <input type="checkbox" id="aged-no-housing" name="noHousingAck" required>
+            <label for="aged-no-housing"><strong>No Housing Acknowledgment:</strong> I confirm this request is not for aged care residential facilities or housing.</label>
+          </div>
+
+          <button type="submit" class="btn btn-primary btn-full">Submit Aged Care Request</button>
+        </form>
+      </article>
+
+    </section>
+
+    <!-- Better Brief Intro & Page Links -->
+    <section class="info-links-banner" aria-labelledby="expect-heading">
+      <h2 id="expect-heading">What to Expect After Submitting</h2>
+      <p>We review your location and support category against our directory of Australian government-registered providers and forward your enquiry so suitable services can contact you directly. Learn more about our process or see how providers participate below.</p>
+      <div class="info-links-actions">
+        <a href="more-info.html" class="btn btn-primary">More Information for Users</a>
+        <a href="providers.html" class="btn btn-secondary">Provider Information</a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p><strong>CareConnect Australia</strong> &mdash; ABN: 00 000 000 000</p>
+      <p class="footer-legal">Independent disability and aged care referral matching service. We are not an emergency service or accommodation provider.</p>
+    </div>
+  </footer>
+
+  <!-- Modal 1: Terms & Conditions / Limits of Service Prompt -->
+  <dialog id="terms-modal" class="app-modal" aria-labelledby="terms-modal-title">
+    <h2 id="terms-modal-title" class="modal-title">Terms &amp; Limits of Service</h2>
+    <p>Before we send your request, please review and accept our service limits:</p>
+    <ul class="modal-list">
+      <li><strong>Referral Matching Only:</strong> We pass your basic contact details to suitable registered providers; we do not deliver clinical or personal care directly.</li>
+      <li><strong>No Housing Services:</strong> Requests involving accommodation or housing will not be processed.</li>
+      <li><strong>Not an Emergency Service:</strong> If you require urgent medical or crisis support, please call <strong>000</strong>.</li>
+    </ul>
+    <div class="modal-actions">
+      <button type="button" id="cancel-terms-btn" class="btn btn-secondary">Cancel</button>
+      <button type="button" id="accept-terms-btn" class="btn btn-primary">I Accept &amp; Submit</button>
+    </div>
+  </dialog>
+
+  <!-- Modal 2: Submission Acknowledgment Popup -->
+  <dialog id="ack-modal" class="app-modal" aria-labelledby="ack-modal-title">
+    <h2 id="ack-modal-title" class="modal-title">Thank You &mdash; Request Received</h2>
+    <p id="ack-modal-message">Thank you for submitting your referral request. Please allow <strong>5&ndash;7 business days</strong> for us to match your enquiry with registered providers in your area.</p>
+    <div class="modal-actions">
+      <button type="button" id="close-ack-btn" class="btn btn-primary">Done</button>
+    </div>
+  </dialog>
+</body>
+</html>

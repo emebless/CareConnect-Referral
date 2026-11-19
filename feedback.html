@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en-AU">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Feedback &amp; Subscriptions | CareConnect Australia</title>
+  <link rel="stylesheet" href="css/reset.css">
+  <link rel="stylesheet" href="css/variables.css">
+  <link rel="stylesheet" href="css/layout.css">
+  <link rel="stylesheet" href="css/components.css">
+  <script src="js/main.js" defer></script>
+  <script src="js/modals.js" defer></script>
+  <script src="js/forms.js" defer></script>
+  <script src="js/subscription.js" defer></script>
+</head>
+<body>
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="index.html" class="logo-link">
+        <img src="assests/logo.jpg" alt="CareConnect Australia Home" width="120" height="48">
+      </a>
+      <nav aria-label="Page Directory">
+        <ul class="nav-list">
+          <li><a href="index.html" class="nav-link">Home</a></li>
+          <li><a href="feedback.html" class="nav-link" aria-current="page">Feedback</a></li>
+          <li><a href="more-info.html" class="nav-link">More Information</a></li>
+          <li><a href="providers.html" class="nav-link">Providers</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main-content" class="container">
+    <!-- Top Section: Quick-Jump Boxes & Contact Guidance -->
+    <section class="hero-section" aria-labelledby="feedback-heading">
+      <h1 id="feedback-heading" class="hero-title">Feedback &amp; Contact Forms</h1>
+      <p>Select a form below to jump directly to it, or scroll down to view all four options. To contact our business, please complete the relevant form below.</p>
+
+      <!-- 4 Quick-Jump Navigation Boxes -->
+      <nav aria-label="Feedback Forms Quick Jump" class="grid-4 section-spacing">
+        <a href="#form-site-issue" class="jump-card">
+          <span class="jump-card-number">Form 1</span>
+          <span>Site Not Working</span>
+        </a>
+        <a href="#form-compliments" class="jump-card">
+          <span class="jump-card-number">Form 2</span>
+          <span>Compliments</span>
+        </a>
+        <a href="#form-complaints" class="jump-card">
+          <span class="jump-card-number">Form 3</span>
+          <span>Complaints</span>
+        </a>
+        <a href="#form-subscriptions" class="jump-card">
+          <span class="jump-card-number">Form 4</span>
+          <span>Subscriptions</span>
+        </a>
+      </nav>
+
+      <!-- Important Notice: Not for Support Requests -->
+      <div class="callout callout-warning section-spacing">
+        <p><strong>Looking for Disability or Aged Care support?</strong> Feedback forms are not support request forms and will not be matched with providers. Please submit care enquiries on the Home Page.</p>
+        <div class="info-links-actions">
+          <a href="index.html" class="btn btn-primary">Go to Support Request Forms</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Stacked Forms Section -->
+    <div class="feedback-stack">
+
+      <!-- 1. Site Not Working Form -->
+      <article id="form-site-issue" class="card form-section-anchor">
+        <h2 class="card-title">1. Site Not Working</h2>
+        <p class="form-intro-text"><strong>When to use this form:</strong> Let us know if a button, link, or form on this website failed to load or submit properly.</p>
+        <form class="feedback-form" data-form-type="Site Not Working" data-folder-tag="[FB-SITE-ISSUE]">
+          <div class="grid-2">
+            <div class="form-group">
+              <label for="issue-page" class="form-label">Which page had the issue?</label>
+              <select id="issue-page" name="affectedPage" class="form-control" required>
+                <option value="" disabled selected>Select a page...</option>
+                <option value="Home Page">Home Page</option>
+                <option value="Feedback Page">Feedback Page</option>
+                <option value="More Information Page">More Information Page</option>
+                <option value="Providers Page">Providers Page</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="issue-contact" class="form-label">Your Email (Optional, if reply needed)</label>
+              <input type="email" id="issue-contact" name="contactEmail" class="form-control" maxlength="60" placeholder="e.g. name@example.com.au">
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="issue-desc" class="form-label">Brief Description of What Happened</label>
+            <textarea id="issue-desc" name="description" class="form-control" maxlength="500" placeholder="Describe what you clicked and what went wrong..." required></textarea>
+          </div>
+
+          <button type="submit" class="btn btn-primary">Submit Technical Report</button>
+        </form>
+      </article>
+
+      <!-- 2. Compliments Form -->
+      <article id="form-compliments" class="card form-section-anchor">
+        <h2 class="card-title">2. Compliments</h2>
+        <p class="form-intro-text"><strong>When to use this form:</strong> Share positive feedback about our referral service or a registered provider you were matched with.</p>
+        <form class="feedback-form" data-form-type="Compliment" data-folder-tag="[FB-COMPLIMENT]">
+          <div class="grid-2">
+            <div class="form-group">
+              <label for="comp-name" class="form-label">Your Name or Initials</label>
+              <input type="text" id="comp-name" name="name" class="form-control" maxlength="40" placeholder="e.g. Alex T." required>
+            </div>
+            <div class="form-group">
+              <label for="comp-about" class="form-label">Who is this compliment about?</label>
+              <select id="comp-about" name="subject" class="form-control" required>
+                <option value="CareConnect Website">CareConnect Referral Service</option>
+                <option value="Matched Provider">A Matched Support Provider</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="comp-desc" class="form-label">Brief Description</label>
+            <textarea id="comp-desc" name="description" class="form-control" maxlength="500" placeholder="Tell us what went well..." required></textarea>
+          </div>
+
+          <button type="submit" class="btn btn-primary">Submit Compliment</button>
+        </form>
+      </article>
+
+      <!-- 3. Complaints Form -->
+      <article id="form-complaints" class="card form-section-anchor">
+        <h2 class="card-title">3. Complaints</h2>
+        <p class="form-intro-text"><strong>When to use this form:</strong> Report a concern regarding our referral process, privacy, or communication from a listed provider.</p>
+        <form class="feedback-form" data-form-type="Complaint" data-folder-tag="[FB-COMPLAINT]">
+          <div class="grid-2">
+            <div class="form-group">
+              <label for="complaint-name" class="form-label">Your Name</label>
+              <input type="text" id="complaint-name" name="name" class="form-control" maxlength="40" required>
+            </div>
+            <div class="form-group">
+              <label for="complaint-contact" class="form-label">Best Contact Phone or Email</label>
+              <input type="text" id="complaint-contact" name="contact" class="form-control" maxlength="60" placeholder="Required so we can follow up" required>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="complaint-desc" class="form-label">Brief Description of Your Complaint</label>
+            <textarea id="complaint-desc" name="description" class="form-control" maxlength="500" placeholder="Provide key details and dates..." required></textarea>
+          </div>
+
+          <button type="submit" class="btn btn-primary">Submit Complaint</button>
+        </form>
+      </article>
+
+      <!-- 4. Provider Subscriptions (3-Step Verification & Payment Workflow) -->
+      <article id="form-subscriptions" class="card form-section-anchor">
+        <h2 class="card-title">4. Provider Subscriptions (Level 2 Upgrade)</h2>
+        <p class="form-intro-text">Only Australian government-registered disability and aged care providers listed in our registry can subscribe. Complete the 3-step verification and payment flow below.</p>
+
+        <div class="subscription-steps">
+          
+          <!-- STEP 1: Registry Lookup -->
+          <section id="sub-step-1" class="step-box step-active" aria-labelledby="step1-title">
+            <div>
+              <span class="step-badge">Step 1 of 3</span>
+              <h3 id="step1-title">Verify Registered Business</h3>
+              <p class="field-hint">Demo registered names: <strong>BlueGum Care</strong> or <strong>Harbourside Support</strong></p>
+
+              <form id="sub-verify-form" class="section-spacing">
+                <div class="form-group">
+                  <label for="sub-business-name" class="form-label">Registered Business Name</label>
+                  <input type="text" id="sub-business-name" name="businessName" class="form-control" placeholder="e.g. BlueGum Care" required>
+                </div>
+
+                <div class="form-group">
+                  <label for="sub-applicant" class="form-label">Person Applying (Full Name)</label>
+                  <input type="text" id="sub-applicant" name="applicantName" class="form-control" placeholder="e.g. Jordan Taylor" required>
+                </div>
+
+                <fieldset class="radio-group">
+                  <legend>Action (Pick One)</legend>
+                  <div class="radio-options">
+                    <label class="radio-label">
+                      <input type="radio" name="subAction" value="Subscribe" checked required> Subscribe
+                    </label>
+                    <label class="radio-label">
+                      <input type="radio" name="subAction" value="Unsubscribe" required> Unsubscribe
+                    </label>
+                  </div>
+                </fieldset>
+
+                <button type="submit" class="btn btn-primary btn-full">Check Registry &amp; Send Link</button>
+              </form>
+            </div>
+
+            <div id="step1-status" class="status-banner" role="status" aria-live="polite"></div>
+          </section>
+
+          <!-- STEP 2: Confirmation Email Simulation -->
+          <section id="sub-step-2" class="step-box step-locked" aria-labelledby="step2-title">
+            <div>
+              <span class="step-badge">Step 2 of 3</span>
+              <h3 id="step2-title">Confirmation Email</h3>
+              <p class="field-hint">Sent exclusively to the official email address on the government provider register.</p>
+
+              <div id="email-preview-box" class="callout section-spacing">
+                <p><strong>Awaiting Step 1 verification...</strong></p>
+                <p class="field-hint">Once your business is verified, a confirmation link including Terms &amp; Conditions will appear here to simulate opening your inbox.</p>
+              </div>
+            </div>
+
+            <button type="button" id="proceed-step3-btn" class="btn btn-secondary btn-full" disabled>
+              Open Step 3 Link &amp; Accept T&amp;Cs
+            </button>
+          </section>
+
+          <!-- STEP 3: Details & Payment Form -->
+          <section id="sub-step-3" class="step-box step-locked" aria-labelledby="step3-title">
+            <div>
+              <span class="step-badge">Step 3 of 3</span>
+              <h3 id="step3-title">Details &amp; Payment</h3>
+
+              <form id="sub-payment-form" class="section-spacing">
+                <div class="form-group">
+                  <label for="sub-plan" class="form-label">Subscription Duration</label>
+                  <select id="sub-plan" name="planDuration" class="form-control" required>
+                    <option value="1-month">1 Month Subscription ($99 AUD)</option>
+                    <option value="3-month">3 Month Subscription ($269 AUD)</option>
+                  </select>
+                </div>
+
+                <div class="form-group">
+                  <label for="sub-extra-emails" class="form-label">Additional Referral Emails</label>
+                  <input type="text" id="sub-extra-emails" name="extraEmails" class="form-control" placeholder="e.g. intake@provider.com.au">
+                </div>
+
+                <div class="form-group">
+                  <label for="sub-locations" class="form-label">Service Locations / Suburbs</label>
+                  <input type="text" id="sub-locations" name="locations" class="form-control" placeholder="e.g. Sydney Metro, Newcastle" required>
+                </div>
+
+                <div class="form-group">
+                  <label for="sub-services" class="form-label">Services Provided</label>
+                  <input type="text" id="sub-services" name="services" class="form-control" placeholder="e.g. Allied Health, Daily Living" required>
+                </div>
+
+                <div class="checkbox-row">
+                  <input type="checkbox" id="sub-terms-ack" required>
+                  <label for="sub-terms-ack">I accept the Provider Terms &amp; Conditions and authorize payment.</label>
+                </div>
+
+                <button type="submit" class="btn btn-primary btn-full">Complete Payment &amp; Activate</button>
+              </form>
+            </div>
+          </section>
+
+        </div>
+
+        <!-- Bottom Provider Info & Problem Subscribing Links -->
+        <div class="sub-footer-links">
+          <a href="providers.html" class="btn btn-secondary">Read Provider Information</a>
+          <a href="#form-site-issue" class="btn btn-secondary">Problem Subscribing? Report Here</a>
+        </div>
+      </article>
+
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p><strong>CareConnect Australia</strong> &mdash; ABN: 00 000 000 000</p>
+      <p class="footer-legal">Independent disability and aged care referral matching service. We are not an emergency service or accommodation provider.</p>
+    </div>
+  </footer>
+
+  <!-- Shared Acknowledgment Modal -->
+  <dialog id="ack-modal" class="app-modal" aria-labelledby="ack-modal-title">
+    <h2 id="ack-modal-title" class="modal-title">Submission Received</h2>
+    <p id="ack-modal-message">Thank you for contacting us. Your submission has been routed to the appropriate team.</p>
+    <div class="modal-actions">
+      <button type="button" id="close-ack-btn" class="btn btn-primary">Done</button>
+    </div>
+  </dialog>
+</body>
+</html>
